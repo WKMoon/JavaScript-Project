@@ -19,7 +19,7 @@ ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 ctx.strokeStyle = DEFAULT_COLOR;
 ctx.fillStyle = DEFAULT_COLOR;
 
-ctx.lineWidth = 2.5;
+ctx.lineWidth = 5.0;
 
 
 
