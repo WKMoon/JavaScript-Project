@@ -1,12 +1,26 @@
+let isLoading = false;
+const body = document.querySelector("body");
+const span = document.createElement("span");
+
 async function axiosData() {
     const {data:{data: {movies}}} = await axios.get("https://yts.mx/api/v2/list_movies.json?sort_by=rating");
     const movieCollections = movies.map(movie => [movie.title, movie.year, movie.genres, movie.summary, movie.medium_cover_image]);
+    isLoading = true;
+    loadData();
     movieCollections.forEach(movie => printMovie(movie));
 }
 
+function loadData(){
+    if(!isLoading){
+        span.innerText = "Loading...";
+        body.appendChild(span);   
+    }
+    else{
+        body.removeChild(span);
+    }
+}
 
 function printMovie(movieCollection) {
-    const body = document.querySelector("body");
     const h3 = document.createElement("h3");
     const img = document.createElement("img");
     const h4 = document.createElement("h4");
@@ -30,7 +44,7 @@ function printMovie(movieCollection) {
     ul.appendChild(li);
     div.appendChild(ul);
 
-    p.innerText = `${movieCollection[3].slice(0,120)}...`;
+    p.innerText = `Description: ${movieCollection[3].slice(0,120)}...`;
     div.appendChild(p);
     
     body.appendChild(div);
@@ -39,6 +53,7 @@ function printMovie(movieCollection) {
 
 
 function init(){
+    loadData();
     axiosData();
 }
 
