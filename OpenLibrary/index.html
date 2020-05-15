@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mr.Moon Library</h1>
+    <div class="search">
+        <div class="searchISBN">
+            <h4>Search ISBN number: </h2>
+            <form class="isbn">
+                <input type="text" required placeholder="ISBN" />
+                <button class="searchISBNBtn" type="submit" onclick="showISBNData()">Search</button>
+            </form>
+            </div>
+
+        <hr></hr>
+
+        <div class="searchGenre">
+            <h4>Choose Genre:</h4>
+
+            <div class="selectGenre">
+                <select id="cars">
+                <option value="Select" selected>Select</option>
+                <option value="Architecture">Architecture</option>
+                <option value="Art Instruction">Art Instruction</option>
+                <option value="Art History">Art History</option>
+                <option value="Dance">Dance</option>
+                <option value="Design">Design</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Film">Film</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Music">Music</option>
+                <option value="Music Theory">Music Theory</option>
+                <option value="Painting">Painting</option>
+                <option value="Photography">Photography</option>
+                </select>
+                <input type="submit" value="Search" onclick="showGenreData()" action="bookData.html">
+            </div>  
+
+        </div>
+        <hr></hr>
+
+    </div>
+    <script src="search.js"></script>
+</body>
+</html>
