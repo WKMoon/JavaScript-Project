@@ -10,37 +10,43 @@
     <h1>Mr.Moon Library</h1>
     <div class="search">
         <div class="searchISBN">
-            <h4>Search ISBN number: </h2>
+            <h4>Search by ISBN: </h4>
             <form class="isbn">
                 <input type="text" required placeholder="ISBN" />
-                <button class="searchISBNBtn" type="submit" onclick="showISBNData()">Search</button>
+                <input type="submit" name="Submit" id="Submit" value="Search" onclick="showISBNData(); return false;"/>
+                <!-- <button class="searchISBNBtn" type="submit" onclick="showISBNData(); return false;">Search</button> -->
             </form>
             </div>
 
         <hr></hr>
 
-        <div class="searchGenre">
-            <h4>Choose Genre:</h4>
+        <div class="searchOCLC">
+            <h4>Search by OCLC:</h4>
+                <form class="oclc">
+                    <input type="text" required placeholder="OCLC" />
+                    <input type="submit" name="Submit" id="Submit" value="Search" onclick="showOCLCData(); return false;"/>
+                    <!-- <button class="searchOCLCBtn" type="submit" onclick="showOCLCData(); return false;">Search</button> -->
+                </form>  
+        </div>
+        <hr></hr>
 
-            <div class="selectGenre">
-                <select id="cars">
-                <option value="Select" selected>Select</option>
-                <option value="Architecture">Architecture</option>
-                <option value="Art Instruction">Art Instruction</option>
-                <option value="Art History">Art History</option>
-                <option value="Dance">Dance</option>
-                <option value="Design">Design</option>
-                <option value="Fashion">Fashion</option>
-                <option value="Film">Film</option>
-                <option value="Graphic Design">Graphic Design</option>
-                <option value="Music">Music</option>
-                <option value="Music Theory">Music Theory</option>
-                <option value="Painting">Painting</option>
-                <option value="Photography">Photography</option>
-                </select>
-                <input type="submit" value="Search" onclick="showGenreData()" action="bookData.html">
-            </div>  
+        <div class="searchLCCN">
+            <h4>Search by LCCN:</h4>
+                <form class="lccn">
+                    <input type="text" required placeholder="LCCN" />
+                    <input type="submit" name="Submit" id="Submit" value="Search" onclick="showLCCNData(); return false;"/>
+                    <!-- <button class="searchLCCNBtn" type="submit" onclick="showLCCNData(); return false;">Search</button> -->
+                </form>  
+        </div>
+        <hr></hr>
 
+        <div class="searchOLID">
+            <h4>Search by OLID:</h4>
+                <form class="olid">
+                    <input type="text" required placeholder="OLID" />
+                    <input type="submit" name="Submit" id="Submit" value="Search" onclick="showOLIDData(); return false;"/>
+                    <!-- <button class="searchOLIDeBtn" type="submit" onclick="showOLIDData(); return false;">Search</button> -->
+                </form>  
         </div>
         <hr></hr>
 

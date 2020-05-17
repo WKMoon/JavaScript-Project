@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    background-color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1{
+    font-size: 70px;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+.bookData{
+    width: 70%;
+    border-radius: 5px;
+    background-color: blanchedalmond;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+      height: 500px;
+    font-weight: 600;
+    margin-top: 2%;
+}
+
+.bookData #bookTitle {
+    position: relative;
+    margin-left: 5%;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 5%;
+    top: 5%;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bookData #largePoster{
+    margin-left: 5%;
+    margin-right: 0;
+    width: 40%;
+    height: 70%;
+    border-radius: 5%;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.bookData #verLine{
+    position: relative;
+    right: -50%;
+    width: 2px; 
+    background-color: darkgray;
+    height: 70%; 
+    float: left;
+    
+}
+
+
+.bookData .rightPanel{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    left:55%;
+    top: -70%;
+    font-size: 150%;
+    font-weight: 300;
+}
+
+

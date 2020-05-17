@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Open Library</title>
+    <link rel="stylesheet" href="bookData.css">
 </head>
 <body>
-    <script src="search.js"></script>
+    <h1>Mr.Moon Library</h1>
+
+    <div class="bookData">
+        <h4 id="bookTitle"></h4>
+        <image id="largePoster" alt="largePoster"></image>
+        <div id="verLine"></div>
+        <div class="rightPanel">
+            <span id="author"></span>
+            <span id="publisher"></span>
+            <span id="pages"></span>
+            <span id="subjects"></span>
+            <span id="pubDate"></span>
+            <span id="weight"></span>
+            <span id="borrowable"></span>
+            <a id="preview_url"></a>
+            <a id="borrow_url"></a>
+        </div>
+    </div>
+
+    <script src="bookData.js"></script>
 </body>
 </html>
