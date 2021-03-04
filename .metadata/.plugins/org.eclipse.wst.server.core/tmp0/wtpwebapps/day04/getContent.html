@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요소의 컨텐츠 가져오기</title>
+</head>
+<body>
+	
+    <textarea class="a" rows="2" cols="40">textarea</textarea>
+	<textarea class="a" rows="2" cols="40">textarea</textarea>
+    <textarea class="a" rows="2" cols="40">textarea</textarea>
+    <textarea class="a" rows="2" cols="40">textarea</textarea>
+	<div class="a">div</div>
+	<strong class="a">strong</strong>
+	<input class="a" value="input">
+	
+</body>
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+/* 
+	jQuery에서는 val()는 textarea와 input태그에 작성된 문자열 값을 가져올 수 있다.
+	jQuery에서는 text()는 이외의 태그들의 값을 가져올 수 있다.
+	*input은 val()로 가져오고 나머지는 text()로 가져오는 것이 일반적이다.
+	
+	자바스크립트에서는 innerHTML은 input태그에 작성된 문자열 값을 가져올 수 없다.
+	자바스크립트에서는 value는 input태그에 작성된 문자열을 가져올 수 있다.
+	*input은 value로 가져오고 나머지는 innerHTML로 가져오는것이 일반적이다.
+*/
+	console.log("=============");
+	$.each($(".a"),function(index,item){
+		console.log($(item).val());
+	});
+	console.log("=============");
+	
+	console.log("=============");
+	$.each($(".a"),function(index,item){
+		console.log($(item).text());
+	});
+	console.log("=============");
+	
+	
+	console.log("=============");
+	$.each($(".a"),function(index,item){
+		console.log(item.innerHTML);
+	});
+	console.log("=============");
+	
+	
+	console.log("=============");
+	$.each($(".a"),function(index,item){
+		console.log(item.value);
+	});
+	console.log("=============");
+</script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요금표</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+<style>
+   table{
+      margin:0 auto;
+      text-align:center;
+      width:30%;
+      font-family:Gugi;
+   }
+   
+   thead{
+      background:#fff9c4;
+   }
+</style>
+</head>
+<body>
+   <table border="1">
+      <caption>요금표</caption>
+      <thead>
+         <tr>
+            <th>구분</th>
+            <th>요금</th>
+         </tr>
+      </thead>
+      <tr>
+         <td class="text">아동</td>
+         <td>무료</td>
+      </tr>
+      <tr>
+         <td class="text">청소년</td>
+         <td>2000</td>
+      </tr>
+      <tr>
+         <td class="text">성인</td>
+         <td>5000</td>
+      </tr>
+   </table>
+   <fieldset style="text-align:center; width:30%; margin:0 auto;">
+      <legend>구분</legend>
+      <input type="text" id="choice">
+      <button onclick="confirm()">확인</button>
+   </fieldset>
+</body>
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+   var tempTr;
+   var tempTd;
+   var tempText;
+   
+   function confirm(){
+      //var input = document.getElementById("choice").value;   //사용자가 입력한 값
+      var input = $("#choice").val();
+      
+      
+      var check = false;
+      if(tempTr != undefined){
+          tempTr.css("background","#fff");
+          tempTd.text(tempText);
+       }
+      
+      $.each($(".text"), function(index, item){
+         if(input == $(item).text()){
+        	 tempTr = $(this).parent();
+        	 tempTd = $(this);
+        	 tempText = $(item).text();
+        	 
+        	 $(this).parent().css("background","#ef5350");
+        	 $(this).text("*"+$(item).text());
+        	 check = true;
+         }
+      });
+    
+      if(!check){
+         alert("다시 시도해주세요");
+         history.go(0);
+      }
+      
+   }
+</script>
+</html>
+
+
+

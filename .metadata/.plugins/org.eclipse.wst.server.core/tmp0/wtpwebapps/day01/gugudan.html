@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단</title>
+</head>
+<body>
+	<h1>구구단</h1>
+	<h3>1~9사이의 구구단을 출력</h3>
+</body>
+
+<script>
+	function printGugudan(dan){
+		//사용자가 입력한 값이 실수인지 정수인지 판단
+		//true이면 실수, false이면 정수
+		var check = dan - Number.parseInt(dan) != 0.0;
+		
+		//하지만 false일지라도 2.0, 3.0...인 값을 false로 판단한다.
+		//false일 떄에는 무조건 정수로 형변환 해준다.
+		
+		if(!check) {dan = parseInt(dan);}
+		
+		//is not a number
+		if(isNaN(dan) || dan <1 || dan >9 || check){
+			alert("잘못 입력하셨습니다.");
+			location.reload();
+			return;
+		}
+		
+		for(let i = 1; i <= 9; i++){
+			document.write(dan + "*" + i + "=" + (dan*i) + "<br>");
+		}
+	}
+	var dan = prompt('몇 단을 보고 싶으세여?',"1~9");
+	printGugudan(dan);
+</script>
+</html>

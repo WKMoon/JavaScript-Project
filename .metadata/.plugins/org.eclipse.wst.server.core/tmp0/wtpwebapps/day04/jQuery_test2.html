@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQeury 심화 예제</title>
+</head>
+<body>
+	<ul class="food">
+		<li>삼겹살</li>
+		<li>초콜릿</li>
+		<li>돈까스</li>
+	</ul>
+	
+	<div class="toggle">눌러보세요</div>
+	
+</body>
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+
+	$(".toggle").click(function(){
+		if($(".food").css("display") == "none"){
+			$(".food").show();
+		}else{
+			$(".food").hide();
+		}
+	});
+
+/* 	$(".toggle").click(function(){
+		if($(".food").css("display") == "none"){
+			$(".food").css("display","block");
+		}else{
+			$(".food").css("display","none");
+		}
+	});
+ */
+/* 	$(".food").children().click(function(){
+		$(this).remove();
+	}); */
+	
+/* 	$(".food li").each(function(index,item){
+		console.log(index);
+		console.log(item);
+	}); */
+</script>
+</html>

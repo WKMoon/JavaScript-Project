@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>다이얼로그 실습</title>
+</head>
+<body>
+
+</body>
+<script>
+	var name = prompt("이름","홍길동");
+	var kor = prompt("국어점수","0");
+	var eng = prompt("영어점수","0");
+	var math = prompt("수학점수","0");
+	var sum = Number(kor)+Number(eng)+Number(math);
+	with(document){
+		write("<pre>");
+		writeln("이름: "+name);
+		writeln("국어점수: "+kor);
+		writeln("영어점수: "+eng);
+		writeln("수학점수: "+math);
+		writeln("총점: "+sum);
+		writeln("평균: "+((sum/3).toFixed(2)));
+	
+		write("</pre>");
+	}
+	
+</script>
+<script>
+if(confirm("입력하신 정보가 맞는지 확인 해주시기 바랍니다.")){
+	with(document){
+		write("<pre>");
+		writeln("이름: "+name);
+		writeln("국어점수: "+kor);
+		writeln("영어점수: "+eng);
+		writeln("수학점수: "+math);
+		writeln("총점: "+sum);
+		writeln("평균: "+(sum/3));
+		writeln("등록 성공!");
+		write("</pre>");
+	}
+}else{
+	alert("처음부터 다시 작성해주시기 바랍니다.");
+}
+</script>
+</html>

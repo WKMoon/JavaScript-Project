@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function pr(arg1,arg2){
+		
+		var result = "";
+		if(isNaN(arg1) && !isNaN(arg2) && arg2 > 0){
+			for(let i = 0; i < arg2; i++){
+				result += arg1;
+			}
+			document.write(result);
+		}//end if
+		else{
+			document.write("잘못 입력");
+			return;
+		}
+	}
+	pr("%",-1);
+</script>
+</html>

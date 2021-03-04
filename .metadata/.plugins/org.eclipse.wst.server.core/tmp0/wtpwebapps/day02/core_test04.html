@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math를 이용한 구구단 연습</title>
+</head>
+<body>
+	<h3>Math를 이용한 구구단 연습</h3>
+</body>
+
+<script>
+	//Math.floor(Math.random()*n) : 0 ~n-1 의 난수
+function getRandomInt() {
+      return {num1 :Math.floor(Math.random() * 9)+1,num2 : Math.floor(Math.random() * 9)+1}
+      }
+   
+   var names=getRandomInt();
+   var q=nums.num1+"*"+nums['num2'];
+   var answer=eva(q);
+   var msg="";
+   
+   var myAnswer = prompt(q+"값은 얼마일까요?",0);
+   
+   if(myAnswer==null){
+      msg="연습종료";
+   }else{
+      msg= anwer==myAnswer ? "정답!" | "오답"..;
+      
+   }
+   
+   msg +="<br>" + q + " = " +"<strong>"+answer+"</strong>";
+   
+   document.write(msg);
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스타일 동적 변경</title>
+</head>
+<body>
+	<h3>스타일 동적 변경</h3>
+	<hr>
+	<p id="firstP" style="color:blue;" onclick="change()">
+		여기를 <span style="color:red;">클리하세요</span>
+	</p>
+</body>
+
+<script>
+	function change(){
+		var p = document.getElementById("firstP");
+		var img = document.createElement("img");
+		img.innerHtml = "이미지 등장"
+		img.setAttribute("src","icon1.png");
+		img.setAttribute("width","80px");
+		
+		p.innerHTML = "<img src='icon1.png'>"
+			p.appendChild(img);
+	}
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>숫자를 한글로 변경하기</title>
+<style>
+	/* 동그라미 구현 */
+	.round {
+		margin-left:150px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: yellow;
+		font-size: 16px;
+		text-align: center;
+		border-color: 5px solid #ab47bc;
+		text-align:center;	
+		line-height:50px;
+	}
+	
+</style>
+<link rel="stylesheet" href="task01.css">
+
+</head>
+<body>
+	<div class="round">1
+	</div>
+	
+	<fieldset>
+		<legend>숫자를 한글로 변경</legend>
+		<textarea id="result" rows="3" cols="40">결과</textarea>
+		<input type="text" id="num">
+		<br>
+		<button onclick="getResult()">변경</button>
+	</fieldset>
+
+</body>
+<script>
+
+
+	function changeToHangle(number){
+		var result;
+		
+		if(!isNaN(number)){
+			var data = number + "";
+			var hangle = "공일이삼사오육칠팔구";
+			result = "";
+			//data가 10칸 collection이라면 i는 0~9
+			for(let i in data){
+				//1234가 전달되면 data에 저장되고
+				//data.charAt(i)를 통해 각 숫자를 하나씩 추출한다.
+				//각 숫자는 hangle배열의 인덱스 번호로 활용되고,
+				//해당 숫자에 알맞는 한글로 변경된다.
+				result += hangle[data.charAt(i)]
+			}
+		}
+		return result;
+	}
+
+	function getResult(){
+		var divTag = document.getElementById("round");
+		var input = document.getElementById("num").value;
+		var textAreaTag = document.getElementById("result");
+		var result  = changeToHangle(input);
+		if(result == undefined || result == ""){
+			textAreaTag.innerHTML = "숫자만 입력하세요";
+			divTab.innerHTML = "4";
+		}else{
+			var temp = result;
+			
+			result = result.replace(undefined,"점");
+			
+			divTag.innerHTML = temp != result ? "2" : "3";
+			
+			textAreaTag.innerHTML = result;
+		}
+		
+	}
+</script>
+</html>

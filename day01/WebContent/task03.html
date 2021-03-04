@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>분석결과</h2>
+	<hr>
+
+</body>
+
+<script>
+	function f(){
+		var pass = "호랑이";
+		while(true){
+			var input = prompt("암호를 입력하세요");
+			if(input == pass){
+				document.write("통과!");
+				break;
+			}else{
+				document.write("틀림");
+				location.reload();
+			}
+		}
+	}
+	f();
+</script>
+</html>

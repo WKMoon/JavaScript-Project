@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="task02.css">
+
+</head>
+<body>
+	<fieldset>
+	<legend>자동차 주행</legend>
+	<textarea id="text" readonly>현재 상태 표시</textarea>
+	<img src="car.png" id="img"><br>
+	<input style="visibility:hidden" onkeyup="activeEnter()" type="text" id="input">
+	<button onclick="SuperCar.showInput()" id="onBtn">시동 켜기</button>
+	<button onclick="SuperCar.engineStop()" id="offBtn">시동 끄기</button>
+	<button id="reset" onclick="clickReset()">초기화</button>
+	</fieldset>
+</body>
+<script src="task02.js"></script>
+
+
+</html>

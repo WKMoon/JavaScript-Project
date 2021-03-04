@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window 객체 예제</title>
+</head>
+<body>
+
+</body>
+<script>
+	window.onload = function(){
+		window.setTimeout(function(){
+			//var w = window.open("https://www.naver.com","_self","width=600","height=300",false);
+			var w = window.open("https://www.naver.com","_child","width=600","height=300",true);
+
+		},3000);
+	}
+</script>
+</html>

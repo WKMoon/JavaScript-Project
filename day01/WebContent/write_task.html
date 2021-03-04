@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document.write() 실습</title>
+</head>
+<body>
+	<script>
+	document.write("<h3>document.write() 활용</h3>");
+	document.write("<hr>");
+	document.write("<pre>")
+	document.writeln("Welcome!");
+	
+	document.writeln("2 + 5는");
+	document.write((2+5)+"입니다.");
+	document.write("</pre>")
+
+	</script>
+</body>
+<script>
+	with(document){
+		write("<h1>document.write() 활용</h1>");
+		write("<hr>");
+		write("<h2>Welcome!</h2>")
+		write("<pre>");
+		writeln("2 + 5는");
+		writeln((2+5)+"입니다.");
+		write("</pre>");
+	}
+</script>
+</html>

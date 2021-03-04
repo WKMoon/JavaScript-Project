@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 객체</title>
+</head>
+<body>
+
+</body>
+<script>
+	function show_balance(){
+		return this.balance;
+	}
+	function deposit(money){
+		this.balance += money;
+	}
+	function withdraw(money){
+		this.balance -= money;
+		return money;
+	}
+	
+
+
+	var account = new Object();
+	account.owner = "한동석";
+	account.code = "1234";
+	account.balance = 100000;
+	
+	account.show_balance = show_balance;
+	account.deposit = deposit;
+	account.withdraw = withdraw;
+	
+	with(document){
+		write("account: ");
+		write(account.owner+", ");
+		write(account.code+", ");
+		write(account.balance+"<br>");
+	}
+	account.deposit(10000);
+	document.write("10000원 입금 후 잔액 "+account.show_balance()+ "원 <br>");
+	document.write(account.withdraw(500000) + "원 출금 후 잔액 : " + account.show_balance() + "원")
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>방문 시간에 따라 변하는 배경</title>
+</head>
+<body>
+	<h2>방문 시간에 따라 변하는 배경</h2>
+	<hr>
+</body>
+<script>
+	var date = new Date();
+	
+	
+	if(date.getSeconds()%2 == 0){
+		document.body.style.backgroundColor = "violet";
+		location.reload();
+	}else{
+		document.body.style.backgroundColor = "lightskyblue";
+		location.reload();
+	}
+	
+
+</script>
+</html>

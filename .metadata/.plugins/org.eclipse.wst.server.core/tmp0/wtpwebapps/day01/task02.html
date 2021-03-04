@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 실습 2</title>
+</head>
+<body>
+	<h2>월화수목금토일</h2>
+	<hr>
+	
+	
+</body>
+<script>
+	function f(){
+		var day = prompt("요일을 입력하세여");
+		var go = "요일은 출근입니다.";
+		var stop = "요일은 휴일입니다.";
+		switch(day){
+		case "월":
+			document.write(day+go);
+			break;
+		case "화":
+			document.write(day+go);
+			break;
+		case "수":
+			document.write(day+go);
+			break;
+		case "목":
+			document.write(day+go);
+			break;
+		case "금":
+			document.write(day+stop);
+			break;
+		case "토":
+			document.write(day+stop);
+			break;
+		case "일":
+			document.write(day+stop);
+			break;
+		}
+	}
+
+</script>
+</html>
